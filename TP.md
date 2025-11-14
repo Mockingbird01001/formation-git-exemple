@@ -3,14 +3,13 @@ TP Formation Git
 
 ## Github
 - Créer un compte https://github.com/join
-- Obtenir un compte Github Developer **gratuit au lieu de 7€ par mois** : https://education.github.com/pack
 
 ## Installation
 
 ### Sur Windows
 Allez sur https://git-scm.com/download/win
 
-### Sur OS X:
+### Sur OS:
 - Si vous avez Xcode, git est déjà installé
 - Si vous avez Homebrew, `brew install git`
 - Sinon, téléchargez Git ici : https://git-scm.com/download/mac
@@ -112,4 +111,38 @@ git checkout master
 # Le fichier branche.txt a disparu
 git checkout ma-premiere-branche
 # Le fichier branche.txt est de retour !
+```
+
+5. Voir l’historique des commits
+```bash
+# Affiche l’historique
+git log
+# Affiche un historique compact
+git log --oneline --graph --decorate --all
+```
+
+6. Annuler des modifications
+```bash
+git checkout -- nom_du_fichier
+```
+
+7. Retirer un fichier de la staging area
+```bash
+git reset nom_du_fichier
+```
+
+8. 
+```bash
+git reset --soft HEAD~1
+```
+
+9. Annuler complètement le dernier commit
+```bash
+git reset --hard HEAD~1
+```
+
+10. Mettre à jour sa branche depuis origin/master
+```bash
+git checkout master
+git pull origin master
 ```
