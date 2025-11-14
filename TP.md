@@ -29,7 +29,7 @@ git config --global user.name "Prénom Nom"
 git config --global push.default simple
 ```
 
-Forker le répo en cliquant [ici](https://github.com/KIClubinfo/formation-git-exemple/fork)
+Forker le répo en cliquant [ici](https://github.com/Mockingbird01001/formation-git-exemple/fork)
 
 ### 1. Cloner le dépôt
 ``` bash
@@ -73,7 +73,7 @@ git push
 ### 3. Gérer un conflit
 
 ```bash
-# On fusionne une branche dans master
+# On fusionne une branche dans main
 git merge merge-me-please
 # On fait une pause et on regarde ce qui vient de se passer
 git status
@@ -106,8 +106,8 @@ git push --set-upstream origin ma-premiere-branche
 Ma nouvelle branch est visible ici : https://github.com/MonNomDUtilisateurGithub/formation-git-exemple/tree/ma-premiere-branche/
 
 ``` bash
-# On peut retourner sur master
-git checkout master
+# On peut retourner sur main
+git checkout main
 # Le fichier branche.txt a disparu
 git checkout ma-premiere-branche
 # Le fichier branche.txt est de retour !
@@ -124,25 +124,19 @@ git log --oneline --graph --decorate --all
 6. Annuler des modifications
 ```bash
 git checkout -- nom_du_fichier
-```
 
-7. Retirer un fichier de la staging area
-```bash
+# Retirer un fichier de la staging area
 git reset nom_du_fichier
-```
 
-8. 
-```bash
+# Annuler le dernier commit (sans perdre les fichiers)
 git reset --soft HEAD~1
-```
 
-9. Annuler complètement le dernier commit
-```bash
+# Annuler complètement le dernier commit
 git reset --hard HEAD~1
 ```
 
-10. Mettre à jour sa branche depuis origin/master
+10. Mettre à jour sa branche depuis origin/main
 ```bash
-git checkout master
-git pull origin master
+git checkout main
+git pull origin main
 ```
